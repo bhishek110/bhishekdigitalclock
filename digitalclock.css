@@ -1,0 +1,67 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body{
+  background: url(digital\ clock\ background.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width:700px) {
+  body{
+    background: url(digital\ clock\ background\ -\ portrait.jpg);
+    background-size: cover;
+  }
+}
+
+.main-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container{
+  display: flex;
+  width: 380px;
+  gap: 10px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+
+p{
+  font-weight: 500;
+  font-size: 50px;
+  position: relative;
+  margin: 0px 10px;
+}
+
+p::after{
+  content: '';
+  position: absolute;
+  font-size: 12px;
+  font-weight: normal;
+  bottom: -10px;
+  left: 6px;
+}
+
+.hrs::after{
+  content: 'HOURS';
+}
+
+.min::after{
+  content: 'MINUTES';
+  left: 8px;
+}
+
+.sec::after{
+  content: 'SECONDS';
+  left: 4px;
+}
+
+
